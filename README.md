@@ -1,5 +1,5 @@
-# CodeChallenges
+# CodeChallenge
 
-In this repository you will find each assigned code challenge. Each code challenge will have a playground file for you to complete your challenge in.
+The name of each code challenge corresponds to the day of the course it's associated with; for instance, SF13 is day 13 of Swift Fundamentals on the master schedule.
 
-You will need to create your own fork of this repository to make changes. You cannot push your completed challenges directly to this repo.
+Students need to create their own fork of the repo and push each challenge to it daily.
