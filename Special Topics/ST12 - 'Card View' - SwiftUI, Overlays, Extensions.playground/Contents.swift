@@ -10,7 +10,7 @@
     //  Make sure you add the requested parameters.
 
 //  Notes: 
-    //  Not sure how to create a custom ViewModifier? Paul Hudson has the answer :)
+    //  Not sure how to create a custom ViewModifier? Paul Hudson has the answer: https://www.hackingwithswift.com/books/ios-swiftui/custom-modifiers
 
 //  ⌺ Black Diamond Challenge:
     //  Make your view modifier more convenient to use by extending View with a function that applies your modifier.
@@ -21,6 +21,7 @@ import PlaygroundSupport
 struct ContentView: View {
     var body: some View {
         Text("You are a good person")
+        //  FIXME: Move these view modifiers to a single ViewModifier
             .font(.custom("Futura", size: 20))
             .padding(20)
             .background {
