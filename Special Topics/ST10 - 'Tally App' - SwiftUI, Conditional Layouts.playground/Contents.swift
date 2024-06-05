@@ -22,7 +22,7 @@
         //  🟥🟥
 
 //  ⌺ Black Diamond Challenge:
-    //  Create another function. This time, return the first and last n elements of the array. If the first and last n elements overlap (i.e., 3 first and 3 last in a 5 element array), return the whole array.
+    //  Look up what a LazyHGrid and LazyVGrid are. Change the implementation below to use one of those two options instead.
 
 import SwiftUI
 import PlaygroundSupport
