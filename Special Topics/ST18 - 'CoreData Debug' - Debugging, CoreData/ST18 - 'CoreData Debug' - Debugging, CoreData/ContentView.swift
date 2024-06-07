@@ -3,7 +3,8 @@
 
 //  Instructions:
     //  Something has gone wrong with your chicken database app, the app you use to track and sort your chickens.
-    //  Track down and fix the bug.
+    //  It was probably your intern, Parker. He's always messing things like this up.
+    //  Track down and fix the bug(s).
 
 //  Notes:
     //  Getting CoreData compatible apps to run in preview can be tricky. Use Simulator for this app.
@@ -18,16 +19,22 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    var viewModel = ViewModel()
+    @State var viewModel = ViewModel()
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(viewModel.chickens) { chicken in
                     NavigationLink {
-                        Text("Chicken at \(chicken.timestamp!, formatter: chickenFormatter)")
+                        VStack {
+                            Image(systemName: "bird")
+                                .resizable()
+                                .scaledToFit()
+                            Text("Chicken: \(chicken.name ?? "No Name")")
+                        }
+                        .padding()
                     } label: {
-                        Text(chicken.timestamp!, formatter: chickenFormatter)
+                        Text(chicken.name ?? "Chicken")
                     }
                 }
                 .onDelete(perform: viewModel.deleteItems)
@@ -48,8 +55,9 @@ struct ContentView: View {
 }
 
 extension ContentView {
+    @Observable
     class ViewModel {
-        @Environment(\.managedObjectContext) private var viewContext
+        @Environment(\.managedObjectContext) var viewContext
         
         @FetchRequest(
             sortDescriptors: [NSSortDescriptor(keyPath: \Chicken.name, ascending: true)],
@@ -59,7 +67,7 @@ extension ContentView {
         func addChicken() {
             withAnimation {
                 let newChicken = Chicken(context: viewContext)
-                newChicken.name = 
+                newChicken.name = ChickenNames.list.randomElement() ?? "Chicken"
                 
                 do {
                     try viewContext.save()
@@ -84,10 +92,3 @@ extension ContentView {
         }
     }
 }
-
-private let chickenFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
