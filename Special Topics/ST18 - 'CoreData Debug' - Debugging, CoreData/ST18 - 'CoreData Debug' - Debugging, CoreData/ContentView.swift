@@ -34,7 +34,10 @@ struct ContentView: View {
                         }
                         .padding()
                     } label: {
-                        Text(chicken.name ?? "Chicken")
+                        HStack {
+                            Text(["🐔", "🐥", "🐓", "🐣","🐤"].randomElement()!)
+                            Text(chicken.name ?? "Chicken")
+                        }
                     }
                 }
                 .onDelete(perform: viewModel.deleteItems)

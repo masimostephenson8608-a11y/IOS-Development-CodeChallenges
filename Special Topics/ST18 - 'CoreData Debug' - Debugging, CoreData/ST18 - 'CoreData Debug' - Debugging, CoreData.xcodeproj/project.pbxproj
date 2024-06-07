@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0ADE39542C136A700045ACFF /* ST18____CoreData_Debug____Debugging__CoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADE39532C136A700045ACFF /* ST18____CoreData_Debug____Debugging__CoreDataApp.swift */; };
+		0ADE39542C136A700045ACFF /* ST18CoreDataDebugDebuggingCoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADE39532C136A700045ACFF /* ST18CoreDataDebugDebuggingCoreDataApp.swift */; };
 		0ADE39562C136A700045ACFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADE39552C136A700045ACFF /* ContentView.swift */; };
 		0ADE39582C136A720045ACFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADE39572C136A720045ACFF /* Assets.xcassets */; };
 		0ADE395B2C136A720045ACFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADE395A2C136A720045ACFF /* Preview Assets.xcassets */; };
@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		0ADE39502C136A700045ACFF /* ST18 - 'CoreData Debug' - Debugging, CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ST18 - 'CoreData Debug' - Debugging, CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ADE39532C136A700045ACFF /* ST18____CoreData_Debug____Debugging__CoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ST18____CoreData_Debug____Debugging__CoreDataApp.swift"; sourceTree = "<group>"; };
+		0ADE39532C136A700045ACFF /* ST18CoreDataDebugDebuggingCoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ST18CoreDataDebugDebuggingCoreDataApp.swift; sourceTree = "<group>"; };
 		0ADE39552C136A700045ACFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0ADE39572C136A720045ACFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ADE395A2C136A720045ACFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		0ADE39522C136A700045ACFF /* ST18 - 'CoreData Debug' - Debugging, CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				0ADE39532C136A700045ACFF /* ST18____CoreData_Debug____Debugging__CoreDataApp.swift */,
+				0ADE39532C136A700045ACFF /* ST18CoreDataDebugDebuggingCoreDataApp.swift */,
 				0ADE39552C136A700045ACFF /* ContentView.swift */,
 				0ADE39662C136DA40045ACFF /* ChickenNames.swift */,
 				0ADE39572C136A720045ACFF /* Assets.xcassets */,
@@ -150,7 +150,7 @@
 				0ADE39672C136DA40045ACFF /* ChickenNames.swift in Sources */,
 				0ADE395D2C136A720045ACFF /* Persistence.swift in Sources */,
 				0ADE39562C136A700045ACFF /* ContentView.swift in Sources */,
-				0ADE39542C136A700045ACFF /* ST18____CoreData_Debug____Debugging__CoreDataApp.swift in Sources */,
+				0ADE39542C136A700045ACFF /* ST18CoreDataDebugDebuggingCoreDataApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
