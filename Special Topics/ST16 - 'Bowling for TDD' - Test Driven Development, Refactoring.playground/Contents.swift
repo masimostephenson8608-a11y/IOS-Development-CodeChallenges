@@ -5,13 +5,15 @@
     //  You are a senior developer at a company building a bowling themed iOS game.
     //  You have a junior developer who is enthusiastic and talented, but who sometimes makes odd coding decisions.
     //  They have submitted the code below. You're pleased they have used TDD and their tests all work, but their some of their decisions are strange to say the least:
-        //  They have gone too far in creating functions for simple code
-        //  They have used a bizzare while loop with a switch statement that should probably just be a For loop and an If statement
+        //  🤨 They have gone too far in creating functions for simple code
+        //  😮‍💨 They have used a bizzare while loop with a switch statement that should probably just be a For loop and an If statement
 
     //  Even though you should just direct them to go back and refactor their code, you decide to brutally fire them and refactor their code yourself.
     //  Refactor the code below without breaking any of the tests. Fix the above stated problems.
-        //  Make sure you have your console open so you can see the state of your tests.
-        //  Do not change any of the testing code.
+
+//  Notes:
+    //  Make sure you have your console open so you can see the state of your tests.
+    //  Do not change any of the testing code.
 
 //  Examples:
     //  Input: [15,5,6,7,2,3,45,12], 3
