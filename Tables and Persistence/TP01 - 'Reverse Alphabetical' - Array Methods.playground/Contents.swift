@@ -6,7 +6,7 @@
 
 //  Examples:
     //  Input: ["Bob", "Jill", "Sally"], Output: ["Sally", "Jill", "Bob"]
-    //  Input: ["Vern", "Gidget", "Zeb"], Output: ["Vern", "Gidget", "Zeb"]
+    //  Input: ["Vern", "Gidget", "Zeb"], Output: ["Zeb", "Vern", "Gidget"]
 
 //  ⌺ Black Diamond Challenge:
     //  Create another function. This time, sort every word's letters reverse alphabetically, then sort all words in the array. You do not need to retain the case of the characters.
