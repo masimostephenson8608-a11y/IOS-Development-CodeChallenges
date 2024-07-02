@@ -8,7 +8,6 @@
 
 //  Notes:
     //  If 0 is given, return an empty array.
-    //  If no argument is given, return nil.
     //  The input will never be a negative integer.
 
 //  Examples:
