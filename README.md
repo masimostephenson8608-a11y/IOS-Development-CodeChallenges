@@ -9,7 +9,7 @@ Each code challenge should be completed in-class, not ahead of time or after the
 For these reasons, code challenges are only scored when completed in class. Since 85% attendance is required, 85% code challenge completion is the minimum as well.
 
 ## Students:
-You should create a fork of this repository to work on completing each challenge. Forking it will allow you to make changes to your own copy of the repository without affecting the original. However, if changes are made to this source repository, you'll be able to add those changes to your fork as well.
+You should create a fork of this repository to work on completing each challenge. Forking it will allow you to make changes to your own copy of the repository without affecting the original. However, if changes are made to this source repository, you'll be able to merge those upstream changes to your fork as well.
 
 ## Instructors:
 For the first weeks of class, send students code challenges manually over Slack. Once we cover Git/GitHub, we will walk them through:
