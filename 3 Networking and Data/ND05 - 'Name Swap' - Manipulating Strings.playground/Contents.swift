@@ -1,4 +1,4 @@
-//  🏔️ MTECH Code Challenge ND01: "Name Swap"
+//  🏔️ MTECH Code Challenge ND05: "Name Swap"
 //  Concept: Practice manipulating the contents of strings algorithmically
 
 //  Instructions:
