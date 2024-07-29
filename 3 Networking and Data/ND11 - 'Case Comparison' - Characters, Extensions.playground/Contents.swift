@@ -1,0 +1,25 @@
+//  🏔️ MTECH Code Challenge ND11: "Case Comparison"
+//  Concept: Practice creating extensions and comparing two variables with unique criteria
+
+//  Instructions:
+    //  Extend the Character type with a method that takes another Character as input and returns an Int as output.
+    //  The method should check if the input character and the character the method is called on are the same case.
+        //  If either of the characters is not a letter, return -1
+        //  If both characters are the same case, return 1
+        //  If both characters are letters, but not the same case, return 0
+
+//  Examples:
+    //  Input: Character("a").sameCaseAs(Charcter("b"))
+    //  Output: 1
+
+    //  Input: Character("C").sameCaseAs(Charcter("d"))
+    //  Output: 0
+
+    //  Input: Character("5").sameCaseAs(Charcter("f"))
+    //  Output: -1
+
+//  ⌺ Black Diamond Challenge:
+    //  Make it so that your function does not rely on existing Character methods or properties (i.e., .isLowercase and .isUppercase).
+    //  Add another method that will instead return the input character in the same case as self.
+
+import Foundation
