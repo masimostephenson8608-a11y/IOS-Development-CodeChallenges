@@ -22,7 +22,7 @@
 
     //  Input: [0, 4, 6, 8], 12
     //  Logic: 12 likes ALL of the spots because he will have an even neighbor at any of them.
-    //  Output: 4
+    //  Output: 3
 
     //  Input: [4, 4, 4, 4, 5], 7
     //  Logic: 7 dislikes every spot except the last one at: [4, __, 5].
