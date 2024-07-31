@@ -19,5 +19,5 @@
 import Foundation
 
 func differenceInVolumes(cube1: [Int], cube2: [Int]) -> Int? {
-    
+    return nil
 }

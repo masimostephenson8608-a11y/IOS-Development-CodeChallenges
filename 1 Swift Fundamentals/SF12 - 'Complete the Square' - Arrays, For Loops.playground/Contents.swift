@@ -1,5 +1,5 @@
-//  🏔️ MTECH Code Challenge #1.2: "Name, Age, and Pi"
-//  Concept: Practice using basic constants and variables
+//  🏔️ MTECH Code Challenge SF12: "Complete the Square"
+//  Concept: Solve simple math problems while working with arrays and loops
 
 //  Instructions:
 //      Create a function called completeTheSquare.

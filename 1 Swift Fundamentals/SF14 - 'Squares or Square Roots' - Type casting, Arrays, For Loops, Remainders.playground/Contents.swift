@@ -2,20 +2,18 @@
 //  Concept: Locate methods for novel operations (like identifying whether a number has an integer square root) and consider logic needed to solve a problem; practice using arrays, for loops, casting between Doubles and Ints
 
 //  Instructions:
-//      Write a method that takes an integer array as a parameter and will process every number from this array.
-//      Return a new array, processing every number of the input array like this:
-//          If the number has an integer square root, add the square root to the array; otherwise, add the square of the number.
+    //  Write a method that takes an integer array as a parameter and will process every number from this array.
+    //  Return a new array, processing every number of the input array like this:
+    //  If the number has an integer square root, add the square root to the array; otherwise, add the square of the number.
 
 //  Restrictions:
-//      The input array will always contain only positive numbers, and will never be empty or null.
+    //  The input array will always contain only positive numbers, and will never be empty or null.
 
-//  Examples: (Using other types of variables)
-//      Input:
-//          [4,3,9,7,2,1]
-//      Output:
-//          [2,9,3,49,4,1]
+//  Examples:
+    //  Input: [4,3,9,7,2,1]
+    //  Output: [2,9,3,49,4,1]
 
 //  ⌺ Black Diamond Challenge:
-//    Create a variable with an initial value, unlike the ones above.
+    //  Create a variable with an initial value, unlike the ones above.
 
 import Foundation
