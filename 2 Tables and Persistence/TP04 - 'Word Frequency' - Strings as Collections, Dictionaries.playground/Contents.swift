@@ -1,5 +1,5 @@
-//  🏔️ MTECH Code Challenge SF18: "Subset of an Array"
-//  Concept: Practice accessing a set of data in an array that is not the entire array; practice using index subscripting
+//  🏔️ MTECH Code Challenge TP04: "Word Frequency"
+//  Concept: Practice evaluating Strings.
 
 //  Instructions:
     //  Write a function that tells how many times a given word occurs in a string.
@@ -17,18 +17,3 @@
     //  Order your output dictionary by frequency.
 
 import Foundation
-
-func occurence(sentence: String) -> [String: Int] {
-    let sentenceArray = sentence.split(separator: " ")
-    var result: [String: Int] = [:]
-    for word in sentenceArray {
-        if result[String(word.lowercased())] != nil {
-            result[String(word.lowercased())] = result[String(word.lowercased())]! + 1
-        } else {
-            result[String(word.lowercased())] = 1
-        }
-    }
-    return result
-}
-
-print(occurence(sentence: "Beware the Jabberwock my son The jaws that bite The claws that catch"))
