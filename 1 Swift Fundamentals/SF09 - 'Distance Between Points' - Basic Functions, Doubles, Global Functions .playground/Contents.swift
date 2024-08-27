@@ -1,5 +1,5 @@
 //  🏔️ MTECH Code Challenge SF09: "Distance Between Points"
-//  Concept: Practice converting mathematical formulae into Swift functions, working with doubles, and using global functions or type methods for things like square roots and exponents
+//  Concept: Practice converting mathematical formulae into Swift functions and working with doubles.
 
 //  Instructions:
     //  Create a function that finds the distance between two points on an x,y plane.
