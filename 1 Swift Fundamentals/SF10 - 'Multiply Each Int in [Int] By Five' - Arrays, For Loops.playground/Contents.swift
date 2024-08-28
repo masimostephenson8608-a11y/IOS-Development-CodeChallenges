@@ -1,5 +1,5 @@
 //  🏔️ MTECH Code Challenge SF10: "Name, Age, and Pi"
-//  Concept: Practice using basic constants and variables
+//  Concept: Practice looping over arrays
 
 //  Instructions:
     //  Create a function that takes in an array of Int's as a parameter
