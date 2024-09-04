@@ -14,6 +14,7 @@
     //  Output: [2,9,3,49,4,1]
 
 //  ⌺ Black Diamond Challenge:
-    //  Create a variable with an initial value, unlike the ones above.
+    //  Make your function able to handle negative numbers as well as empty/null arrays.
+    //  Use .map(:) or .compactMap(:) instead of a for-loop.
 
 import Foundation
