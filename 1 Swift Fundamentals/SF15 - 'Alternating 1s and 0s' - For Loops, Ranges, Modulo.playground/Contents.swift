@@ -1,5 +1,5 @@
-//  🏔️ MTECH Code Challenge #1.2: "Name, Age, and Pi"
-//  Concept: Practice using basic constants and variables
+//  🏔️ MTECH Code Challenge SF15: "Alternating 1s and 0s"
+//  Concept: Use for loops to produce strings or collections
 
 //  Instructions:
     //  Create a function called 'stringy' that takes a size and returns a string of alternating '1s' and '0s' that is that size.
