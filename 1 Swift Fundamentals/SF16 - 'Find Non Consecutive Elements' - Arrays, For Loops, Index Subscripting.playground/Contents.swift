@@ -20,6 +20,6 @@
 //  ⌺ Black Diamond Challenge:
     //  Create another function. This time, when a non-consecutive number is found, end the previous array and start a new one. Return an array of arrays of Integers where all the arrays of Integers now only have consecutive numbers.
         //  Input: [1,2,3,5,6,7,9,10,11]
-        //  Output: [[1,2,3], [5,6,7], [8,9,10]]
+        //  Output: [[1,2,3], [5,6,7], [9,10,11]]
 
 import Foundation
