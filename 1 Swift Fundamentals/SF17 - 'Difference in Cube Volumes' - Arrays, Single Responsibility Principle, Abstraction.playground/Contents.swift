@@ -6,7 +6,7 @@
     //  Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b.
     //  You must find the difference of the cuboids' volumes regardless of which is bigger.
 
-//  Examples: (Using other types of variables)
+//  Examples:
     //  Input: ([2, 2, 3], [5, 4, 1])
     //  Logic: Volume of cube a is 12, volume of cube b is 20. Therefore, should return 8.
     //  Output: 8
