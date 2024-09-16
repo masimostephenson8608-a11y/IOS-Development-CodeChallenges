@@ -13,6 +13,6 @@
     //  Output: 20
 
 //  ⌺ Black Diamond Challenge:
-    //  Create another function. This time, return the first and last n elements of the array. If the first and last n elements overlap (i.e., 3 first and 3 last in a 5 element array), return the whole array.
+    //  Create a second function that instead returns two arrays, separating the positive and the negative numbers in the array. You can return it as an ([Int], [Int]) tuple, or as a custom structure holding both arrays.
 
 import Foundation
