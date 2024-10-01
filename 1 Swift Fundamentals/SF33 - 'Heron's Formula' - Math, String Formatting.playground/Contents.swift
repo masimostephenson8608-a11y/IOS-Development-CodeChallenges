@@ -4,6 +4,7 @@
 //  Instructions:
     //  In geometry, Heron's formula (or Hero's formula) gives the area of a triangle in terms of the three side lengths a, b, and c.
     //  Look up Heron's formula. Note that it is composed of two equations; one defines "s", and the other uses the result of that equation to find "A", the area.
+    //  Create a function that takes in the three sides and returns a String of the resulting area.
     //  Your output should have two digit precision.
 
 //  Notes:
