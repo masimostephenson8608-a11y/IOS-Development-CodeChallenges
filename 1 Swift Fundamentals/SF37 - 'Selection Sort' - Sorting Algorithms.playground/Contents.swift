@@ -12,6 +12,6 @@
 
 //  ⌺ Black Diamond Challenge:
     //  Read about Introsort, the actual sorting algorithm Apple has chosen to use in the Array.sort() method, as well as elsewhere. 🔗https://en.wikipedia.org/wiki/Introsort
-    //  Like before, you are not expected to understand every element of the page, but take notes in a comment on this challenge about hwat you can glean from the information.
+    //  Like before, you are not expected to understand every element of the page, but take notes in a comment on this challenge about what you can glean from the information.
 
 import Foundation
