@@ -1,5 +1,5 @@
-//  🏔️ MTECH Code Challenge SF18: "Subset of an Array"
-//  Concept: Practice accessing a set of data in an array that is not the entire array; practice using index subscripting
+//  🏔️ MTECH Code Challenge SF38: "Merge Sort & Sorting Summary"
+//  Concept: Review sorting algorithms and demonstrate a base level understanding of time complexity.
 
 //  Instructions:
     //  Do some research on Merge Sort: 🔗https://en.wikipedia.org/wiki/Merge_sort
