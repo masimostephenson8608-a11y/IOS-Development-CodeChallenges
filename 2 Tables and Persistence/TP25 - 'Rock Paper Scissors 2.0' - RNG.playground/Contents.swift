@@ -1,5 +1,5 @@
-//  🏔️ MTECH Code Challenge SF18: "Subset of an Array"
-//  Concept: Practice accessing a set of data in an array that is not the entire array; practice using index subscripting
+//  🏔️ MTECH Code Challenge TP25: "Rock Paper Scissors 2.0"
+//  Concept: Add custom randomization to a function. Black Diamond: Parse arrays.
 
 //  Instructions:
     //  Create a function that takes in a string as input. This is the users move (either rock, paper, or scissors).
