@@ -13,6 +13,6 @@
     //  You can assume the input will always be a single pair of names, first and last.
 
 //  ⌺ Black Diamond Challenge:
-    //  Write another function that accepts a full name as input (first, middle, last) in the format, "lastName, firstName middleInitial." Include the comma, abbreviate the middle initial to one letter and add a period.
+    //  Write another function that accepts a full name as input (first, middle, last) and returns a string in the format, "lastName, firstName middleInitial." Include the comma, abbreviate the middle initial to one letter and add a period.
 
 import Foundation
