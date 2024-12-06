@@ -6,7 +6,7 @@
 //  Your harried co-workers are looking to you for a solution to take this garbled text and remove all of the numbers. Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
 
 //  Examples:
-    //  Input: "Ala3s, poo4r Yoric888k! I kn3ew h41im, H0or4at1i0o"
+    //  Input: "Ala3s, poo4r Yoric888k! I kn3ew h41im, H0or4at1i0o."
     //  Output: "Alas, poor Yorick! I knew him, Horatio."
 
 //  ⌺ Black Diamond Challenge:

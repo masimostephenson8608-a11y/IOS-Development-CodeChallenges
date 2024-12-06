@@ -21,8 +21,9 @@
     //  +5 dog years for each year after that
 
 //  Examples:
-    //  Input: [15,5,6,7,2,3,45,12], 3
-    //  Output: [15,5,6]
+    //  Input: animalYearCalculator(humanYears: 9)
+    //  Math: Based on the formulae above, catYears will be 15 + 9 + (4 * 7), dogYears will be 15 + 9 + (5 * 7)
+    //  Output: (humanYears: 9, catYears: 52, dogYears: 59)
 
 //  ⌺ Black Diamond Challenge:
     //  Create more calculators for different animals. You could differentiate between large and small dogs, calculate parakeet or Galapagos tortoise years, or any other species you choose. Calculate them how you see fit.
