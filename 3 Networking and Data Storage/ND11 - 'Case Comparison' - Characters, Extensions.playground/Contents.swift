@@ -20,6 +20,7 @@
 
 //  ⌺ Black Diamond Challenge:
     //  Make it so that your function does not rely on existing Character methods or properties (i.e., .isLowercase and .isUppercase).
+    //  Use an enum as the return type instead of an Int.
     //  Add another method that will instead return the input character in the same case as self.
 
 import Foundation
