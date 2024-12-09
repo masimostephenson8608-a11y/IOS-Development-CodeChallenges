@@ -9,13 +9,13 @@
         //  If both characters are letters, but not the same case, return 0
 
 //  Examples:
-    //  Input: Character("a").sameCaseAs(Charcter("b"))
+    //  Input: Character("a").sameCaseAs(Character("b"))
     //  Output: 1
 
-    //  Input: Character("C").sameCaseAs(Charcter("d"))
+    //  Input: Character("C").sameCaseAs(Character("d"))
     //  Output: 0
 
-    //  Input: Character("5").sameCaseAs(Charcter("f"))
+    //  Input: Character("5").sameCaseAs(Character("f"))
     //  Output: -1
 
 //  ⌺ Black Diamond Challenge:
