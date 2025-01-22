@@ -16,6 +16,6 @@
 //      9
 
 //  ⌺ Black Diamond Challenge:
-//    Create a variable with an initial value, unlike the ones above.
+//      Add a new function with the same name but one more parameter, exponent. Raise each number in the array by the given exponent, then return the sum.
 
 import Foundation

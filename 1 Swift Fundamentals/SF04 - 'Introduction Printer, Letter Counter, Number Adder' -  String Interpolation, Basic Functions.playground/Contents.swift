@@ -4,9 +4,6 @@
 //  Instructions:
     //  Under each step below, write the required code.
 
-//  ⌺ Black Diamond Challenge:
-    //  Create a function that prints the results of each step all at once.
-
 import Foundation
 
 //  1) Change the values below to your own name and age.
@@ -21,4 +18,8 @@ func letterCount(word: String) -> Int {
     return 0
 }
 
-//  4) Create a function that takes in two Ints. The function will return the two Int's added together.
+//  4) Create a function that takes in two Ints. The function will return the two Ints added together.
+
+
+//  ⌺ Black Diamond Challenge:
+    //  Create a function that prints the results of each step all at once.
