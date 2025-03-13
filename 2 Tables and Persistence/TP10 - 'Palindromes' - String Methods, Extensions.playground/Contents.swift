@@ -16,7 +16,7 @@
     //  Find a way to check whether a phrase or sentence is a palindrome — for example, "Taco Cat" or, "Too bad I hid a boot." You'll have to find a way to remove spaces in your phrases to get the function to work.
 
 //  Fun Facts:
-    //  The Finnish word "saippuakivikauppias" is 19 letters, is a palindrome, and is used regularly.
+    //  The Finnish word "saippuakauppias" is 15 letters, is a palindrome, and is used regularly.
     //  "A man, a plan, a canal - panama!" is a famous palindrome by Leigh Mercer; Dan Hoey expanded it to 540 words: 🔗http://complex.gmu.edu/people/ernie/witty/Hoey_palindrome.html
 
 import Foundation
