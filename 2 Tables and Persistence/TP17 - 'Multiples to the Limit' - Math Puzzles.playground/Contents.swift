@@ -1,4 +1,4 @@
-//  🏔️ MTECH Code Challenge TP17: "Multiples of a Number"
+//  🏔️ MTECH Code Challenge TP17: "Multiples to the Limit"
 //  Concept: Practice translating mathematical functions into Swift code
 
 //  Instructions:
