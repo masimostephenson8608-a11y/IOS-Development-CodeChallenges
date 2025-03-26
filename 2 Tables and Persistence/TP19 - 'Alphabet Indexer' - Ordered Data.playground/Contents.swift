@@ -14,5 +14,6 @@
 
 //  ⌺ Black Diamond Challenge:
     //  Extend the functionality to handle strings with multiple characters. For such strings, return the sum of the positions of all the letters in the string. If any non-letter characters are present, throw an error, return nil, or fail to compile.
+    //  Rewrite your function to not rely on using a literal array for the alphabet. (In other words, the alphabet itself should not appear in your function.)
 
 import Foundation
