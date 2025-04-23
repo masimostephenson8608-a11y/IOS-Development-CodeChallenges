@@ -3,20 +3,19 @@
 
 //  Instructions:
     //  Create a function that takes an array of integers as input and returns an integer.
-    //  Your task is to sum the differences between consecutive pairs in the array in descending order.
+    //  Your task is to sum the differences between consecutive pairs. Find the absolute difference between each consecutive pair in the array (e.g., if the order is 2, 10, then the absolute difference would be 8, instead of the normal difference, -8.) Output the sum of the absolute differences.
 
 //  Examples:
     //  Input: [2, 1, 10]
     //  Logic:
-        //  Sort into descending order: [10, 2, 1]
-        //  Find differences: 10 - 2 = 8, 2 - 1 = 1
-        //  Sum differences: 8 + 1 = 9
-    //  Output: 9
+        //  Find differences: 2 - 1 = 1, 1 - 10 = -9 (so absolute difference is 9)
+        //  Sum differences: 1 + 9 = 10
+    //  Output: 10
 
 //  Notes:
     //  If the array is empty or only has one element, the result should be 0.
 
 //  ⌺ Black Diamond Challenge:
-    //  Create another function. This time, do not sort the array. Find the absolute difference between each consecutive pair in the array (e.g., if the order is 2, 10, then the absolute difference would be 8, instead of the normal difference, -8.) Output the sum of the absolute differences.
+    //  Calculate and return the average difference as well.
 
 import Foundation

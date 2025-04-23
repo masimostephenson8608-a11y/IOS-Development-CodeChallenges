@@ -13,7 +13,7 @@
     //  Output: [2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 //  ⌺ Black Diamond Challenge:
-    //  Add a third parameter, c. Only return integers in the array that are disible by c.
+    //  Add a third parameter, c. Only return integers in the array that are divisible by c.
     //  Input: 2, 10, 3
     //  Output: [3, 6, 9]
 
