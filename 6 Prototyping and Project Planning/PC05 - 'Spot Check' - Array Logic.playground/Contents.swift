@@ -29,6 +29,5 @@
     //  Output: 1
 
 //  ⌺ Black Diamond Challenge:
-    //  Create another function. This time, return the first and last n elements of the array. If the first and last n elements overlap (i.e., 3 first and 3 last in a 5 element array), return the whole array.
-
+    //  7s are special now. They only like to hang out between one odd and one even number. Rewrite your code to take the case of 7s into account.
 import Foundation
