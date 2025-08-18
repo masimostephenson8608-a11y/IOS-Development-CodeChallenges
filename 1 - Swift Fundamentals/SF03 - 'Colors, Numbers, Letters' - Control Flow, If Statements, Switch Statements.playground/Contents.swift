@@ -6,7 +6,7 @@
     //  As you work, change the color, number, and letter constants to see how it changes the outcome of each control flow statement.
 
 //  ⌺ Black Diamond Challenge:
-    //  Create and switch statement that will print "That's a color!" for any primary or secondary color, and "I don't know that one." for any other string.
+    //  Create a switch statement that will print "That's a color!" for any primary or secondary color, and "I don't know that one." for any other string.
 
 import Foundation
 
@@ -16,16 +16,16 @@ let number = 50
 let letter = "a"
 
 //  1) Create an if statement that checks to see if the color variable is "blue"
-    //  If it is then print "That is my favorite color!"
+    //  If it is, print "That is my favorite color!"
     //  If the color is not "blue" then print "Cool!"
     //  Only one of the print statments should print when you run your code. NOT BOTH.
 
 
 //  2) Check to see if the number variable is between 1 and 100.
-    //  If it is print "That is a valid number
+    //  If it is, print "That is a valid number
     //  If it is not between 1 and 100 print "That is NOT a valid number"
 
 
 //  3) Create a switch statement to check if letter is a vowel.
-    //  If it is then print "letter is a vowel!"
+    //  If it is, print "letter is a vowel!"
     //  If it is not a vowel then print "letter is a consonant"
