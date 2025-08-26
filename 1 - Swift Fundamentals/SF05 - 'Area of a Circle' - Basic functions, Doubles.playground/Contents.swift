@@ -14,3 +14,8 @@
 
 import Foundation
 
+func area(_ rad: Int) -> Double {
+    return Double.pi * pow(Double(rad), 2)
+}
+
+area(3)

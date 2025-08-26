@@ -12,20 +12,43 @@ import Foundation
 
 // Starter code: Change the value of these constants to thoroughly test your code.
 let color = "blue"
-let number = 50
-let letter = "a"
+let number = 101
+let letter = "b"
+
+switch color {
+case "blue", "red", "yellow", "orange", "green", "purple":
+    print("That's a color.")
+default:
+    print("I don't know that one.")
+}
 
 //  1) Create an if statement that checks to see if the color variable is "blue"
     //  If it is, print "That is my favorite color!"
     //  If the color is not "blue" then print "Cool!"
     //  Only one of the print statments should print when you run your code. NOT BOTH.
+if color == "blue"{
+    print("That's my favorite color.")
+} else {
+    print("Cool!")
+}
 
 
 //  2) Check to see if the number variable is between 1 and 100.
     //  If it is, print "That is a valid number
     //  If it is not between 1 and 100 print "That is NOT a valid number"
+if (number > 1 && number < 100) {
+    print("That is a valid number.")
+} else {
+    print("That is NOT a valid number.")
+}
 
 
 //  3) Create a switch statement to check if letter is a vowel.
     //  If it is, print "letter is a vowel!"
     //  If it is not a vowel then print "letter is a consonant"
+switch letter{
+case "a", "e", "i", "o", "u":
+    print("Letter is a vowel.")
+default:
+    print("Letter is a consonant.")
+}

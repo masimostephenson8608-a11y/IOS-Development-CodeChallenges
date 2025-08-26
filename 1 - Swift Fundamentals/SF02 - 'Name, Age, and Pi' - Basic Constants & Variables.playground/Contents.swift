@@ -22,3 +22,13 @@
     //  Create a variable with an initial value, unlike the ones above.
 
 import Foundation
+
+var name: String
+var age: Int
+
+name = "Masimo"
+age = 17
+
+let pi = 3.14
+
+var blackDiamond: String = "Initial Value"
