@@ -23,3 +23,15 @@
     //  Alternate from there as expected, i.e. "01010"
 
 import Foundation
+
+func stringy(size: Int) -> String {
+    var string = ""
+    for i in 1...size {
+        if i % 2 == 1 {
+            string += "1"
+        } else { string += "0"}
+    }
+    return string
+}
+
+print(stringy(size: 7))

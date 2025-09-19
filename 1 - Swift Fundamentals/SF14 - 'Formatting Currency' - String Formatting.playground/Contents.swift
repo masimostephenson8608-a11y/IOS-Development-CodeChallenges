@@ -18,3 +18,9 @@
     //  Look up the current conversion rate for USD -> JPY (yen). Create another function that will first convert the input to yen before outputting the formatted amount, prefixed with "¥" (the symbol for yen).
 
 import Foundation
+
+func returnDollarFormat(Amount: Float) -> String {
+    return Amount.formatted(.currency(code: "USD"))
+}
+
+print(returnDollarFormat(Amount: 25.678))

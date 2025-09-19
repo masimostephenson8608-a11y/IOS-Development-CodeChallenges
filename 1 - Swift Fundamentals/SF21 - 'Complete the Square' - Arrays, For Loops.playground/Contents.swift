@@ -19,3 +19,26 @@
 //      Add a new function with the same name but one more parameter, exponent. Raise each number in the array by the given exponent, then return the sum.
 
 import Foundation
+
+func completeTheSquare(array: [Int]) -> Int {
+    var newArray: [Int] = []
+    for i in array {
+        newArray.append(i * i)
+    }
+    return newArray.reduce(0) {$0 + $1}
+}
+
+func blackDiamond(array: [Int], _ exponent: Int) -> Int {
+    let newArray = array.map {powl(Double($0), Double(exponent))}
+    var intArray: [Int] = []
+    for i in newArray {
+        intArray.append(Int(i))
+    }
+    return intArray.reduce(0) {$0 + $1}
+}
+
+let testArray = [2, 4, 6, 8]
+print(completeTheSquare(array: testArray))
+print("Next:")
+print(blackDiamond(array: testArray, 2))
+

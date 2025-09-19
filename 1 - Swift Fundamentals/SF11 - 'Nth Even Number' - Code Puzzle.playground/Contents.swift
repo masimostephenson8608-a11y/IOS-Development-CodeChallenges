@@ -17,3 +17,13 @@
     //  Add a boolean parameter called "even". If true, return the nth even number; if false, return the nth odd number.
 
 import Foundation
+
+func nthEvenNumber(input: Int, even: Bool) {
+    if even == true {
+        print(0 + (2 * (input - 1)))
+    } else {
+        print(1 + (2 * (input - 1)))
+    }
+}
+
+nthEvenNumber(input: 5, even: false)

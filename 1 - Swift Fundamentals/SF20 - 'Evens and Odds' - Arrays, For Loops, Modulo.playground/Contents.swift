@@ -26,3 +26,17 @@
 //          "13: Odd"
 
 import Foundation
+
+func evenOrOddArray(array: Array<Int>) {
+    for i in array {
+        if i % 2 == 1 {
+            print("\(i): Odd")
+        } else {
+            print("\(i): Even")
+        }
+    }
+}
+
+var testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+evenOrOddArray(array: testArray)

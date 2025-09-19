@@ -16,3 +16,34 @@
     //  Create a second function that instead returns two arrays, separating the positive and the negative numbers in the array. You can return it as an ([Int], [Int]) tuple, or as a custom structure holding both arrays.
 
 import Foundation
+
+func returnPositives(array: [Int]) -> Int {
+    var sum: Int = 0
+    for i in array {
+        if i <= 0 {
+            continue
+        } else {
+            sum += i
+        }
+    }
+    return sum
+}
+
+func positivesAndNegatives(array: [Int]) -> (positives: Int, negatives: Int) {
+    var positiveSum: Int = 0
+    var negativeSum: Int = 0
+    for i in array {
+        if i <= 0 {
+            negativeSum += i
+        } else {
+            positiveSum += i
+        }
+    }
+    return (positiveSum, negativeSum)
+}
+
+let testArray = [-2, -3, 2, 3]
+print(returnPositives(array: testArray))
+
+print(positivesAndNegatives(array: testArray).negatives)
+print(positivesAndNegatives(array: testArray))

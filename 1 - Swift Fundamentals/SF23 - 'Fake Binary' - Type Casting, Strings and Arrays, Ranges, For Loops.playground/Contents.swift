@@ -17,3 +17,22 @@
     //  Add three more parameters to your function; one that defines the mid-point (5 in the above instructions), and one that defines what to replace each digit with (0 and 1 in the above examples)
 
 import Foundation
+
+func stringNumber(randomString: String) -> String {
+    var returnStatement = ""
+    if Int(randomString) == nil {
+        return ""
+    }
+    for number in randomString {
+        if let digit = Int(String(number)) {
+            if digit < 5 {
+                returnStatement += "0"
+            } else if digit >= 5 {
+                returnStatement += "1"
+            }
+        }
+    }
+    return returnStatement
+}
+
+print(stringNumber(randomString: "51093"))

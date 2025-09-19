@@ -12,3 +12,17 @@
     //  Create another function. This time, return the first and last n elements of the array. If the first and last n elements overlap (i.e., 3 first and 3 last in a 5 element array), return the whole array.
 
 import Foundation
+
+func returnCertainAmountOfElements (array: Array<Int>, numberOfElements n: Int) -> [Int] {
+    var result: [Int] = []
+    for i in 0...n {
+        result.append(array[i])
+    }
+    return result
+}
+
+var test: [Int] = []
+for i in 0...100{
+    test.append(i)
+}
+print(returnCertainAmountOfElements(array: test, numberOfElements: 88))

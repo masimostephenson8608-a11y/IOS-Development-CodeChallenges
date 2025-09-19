@@ -20,3 +20,15 @@
     //  If the sides do not form a valid triangle, return an appropriate error message.
 
 import Foundation
+
+func heronsFormula (sideA a : Int, sideB b : Int, sideC c : Int) -> String {
+    if a + b < c ||  b + c < a || c + a < b {
+        return("Invalid Side Lengths")
+    }
+    let semiPerimeter = Float((a + b + c) / 2)
+    let equation = semiPerimeter * (semiPerimeter - Float(a)) * (semiPerimeter - Float(b)) * (semiPerimeter - Float(c))
+    let area = equation.squareRoot()
+    return String(format: "%0.2f", area)
+}
+
+print(heronsFormula(sideA: 1, sideB: 3, sideC: 5))

@@ -23,3 +23,19 @@
         //  Output: [[1,2,3], [5,6,7], [9,10,11]]
 
 import Foundation
+
+func notConsecutive (array: [Int]) -> Int? {
+    if array.count <= 1 {
+        return nil
+    }
+    for (x, y) in array.enumerated() {
+        if x > 0 {
+            if y != array[x-1] + 1 {
+                return y
+            }
+        }
+    }
+    return nil
+}
+
+print(notConsecutive(array: [-5, -4, -3, -1, 0, 1, 2, 4, 6]))
