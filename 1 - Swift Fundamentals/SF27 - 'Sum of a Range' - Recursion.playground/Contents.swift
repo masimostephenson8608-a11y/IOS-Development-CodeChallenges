@@ -21,3 +21,16 @@
     //  Input: -5, Math: -5 + -4 + -3 + -2 + -1, Output: -15
 
 import Foundation
+
+func sumFromOneToNum(num: Int) -> Int {
+    if num < 1 {
+        return 0
+    }
+    var start = 0
+    for count in 1...num {
+        start += count
+    }
+    return start
+}
+
+print(sumFromOneToNum(num: 2))
