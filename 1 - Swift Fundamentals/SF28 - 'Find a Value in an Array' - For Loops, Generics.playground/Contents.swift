@@ -21,3 +21,24 @@
     //  Create another function. Accomplish the same goal using generics instead of function overloading.
 
 import Foundation
+
+func findValue(a: [String], x: String) -> Bool {
+    a.contains(x)
+}
+
+func findValue(a: [Int], x: Int) -> Bool {
+    a.contains(x)
+}
+
+let testString = ["hi", "no", "h", "i", "boooo"]
+let testInt = [1, 2, 3, 5, 6, 7, 9, 10]
+
+func generics<T: Equatable> (a:[T], x: T) -> Bool {
+    a.contains(x)
+}
+
+print(findValue(a: testString, x: "no"))
+print(findValue(a: testInt, x: 4))
+print(findValue(a: testInt, x: 5))
+print(generics(a: testInt, x: 6))
+print(generics(a: testString, x: "h"))
