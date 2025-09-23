@@ -24,3 +24,27 @@
     //  Create another function. This time, return the first and last n elements of the array. If the first and last n elements overlap (i.e., 3 first and 3 last in a 5 element array), return the whole array.
 
 import Foundation
+
+enum wolfAndSheeps {
+    case sheep, wolf
+}
+
+func wolfAndSheep(array: [wolfAndSheeps]) {
+    let startFromLast = array.count - 1
+    var firstCheck = true
+    var sheepCount = 0
+    
+    for count in 0...array.count {
+        if array.last == .wolf && firstCheck == true {
+            print("Pls go away and stop eating my sheep")
+            firstCheck = false
+        }
+        if array[startFromLast - sheepCount ] == .wolf {
+            print("Oi! Sheep number \(sheepCount)! You are about to be eaten by a wolf!")
+        }
+        sheepCount += 1
+    }
+    
+}
+
+wolfAndSheep(array: [.sheep, .sheep, .wolf, .sheep, .sheep, .wolf])
