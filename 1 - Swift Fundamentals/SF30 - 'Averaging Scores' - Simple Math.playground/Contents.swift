@@ -19,3 +19,17 @@
     //  Create a function that not only calculates the average and rounds down, but also returns the highest and lowest values in the array.
 
 import Foundation
+
+func avg(array: [Double]) -> Int {
+    if array.isEmpty {
+        return 0
+    }
+    let sumArray = array.reduce(0) { $0 + $1 }
+    return Int(round(sumArray / Double(array.count)))
+}
+
+let testArray: [Double] = [1, 2, 3, 4, 5]
+let testArray2: [Double] = [90, 80, 70, 60, 50]
+print(avg(array: testArray))
+print(avg(array: testArray2))
+
