@@ -26,3 +26,19 @@
     //  Make another function with the same goal, but which accepts an array of integers as a parameter and prints the tables for each integer in the array.
 
 import Foundation
+
+func timesTable(nums: Int) {
+    for numbers in 1...10 {
+        print(numbers, "*", nums, "=",  numbers * nums)
+    }
+}
+
+func timesTable(nums: [Int]) {
+    for count in nums {
+        for numbers in 1...10 {
+            print(numbers, "*", count, "=",  numbers * count)
+        }
+    }
+}
+timesTable(nums: 30)
+timesTable(nums: [5, 4, 3, 2, 1])
