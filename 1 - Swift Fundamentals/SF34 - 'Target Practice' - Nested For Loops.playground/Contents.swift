@@ -22,3 +22,19 @@
     //  There is another solution to this problem that does not take as long, though it may be difficult at this stage in your progress to know how to code it. In a comment, brainstorm how that secondary solution might work.
 
 import Foundation
+
+func returnIndicesThatMakeSum (array: [Int], target: Int) -> [Int] {
+    for (index1, output1) in array.enumerated() {
+        for (index2, output2) in array.enumerated() {
+            if output1 + output2 == target {
+                return [index1, index2]
+            } else {
+                continue
+            }
+        }
+    }
+    return [0]
+}
+
+let testArray = [0, 1, 2, 3, 4, 8, 9]
+print(returnIndicesThatMakeSum(array: testArray, target: 13))
