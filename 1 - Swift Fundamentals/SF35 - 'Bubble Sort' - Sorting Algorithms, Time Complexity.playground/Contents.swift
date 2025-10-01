@@ -17,3 +17,34 @@
     //  This is an article with complicated computer science theory; you do not need to understand the entire history of computing after reading one Wiki page. Take notes in a comment in this challenge on what you do glean and learn about the different sorting algorithms as you skim through.
 
 import Foundation
+
+
+func sortTheArray(array: [Int]) -> [Int] {
+    var functionArray = array
+    var sorted = false
+    var boolArray: [Bool] = []
+    while sorted != true {
+        for numbers in 0...functionArray.count - 2 {
+            if functionArray[numbers] > functionArray[numbers + 1] {
+                functionArray.swapAt(numbers, numbers + 1)
+            }
+        }
+        for i in 0..<functionArray.count - 1 {
+            if functionArray[i] > functionArray[i + 1] {
+                boolArray += [false]
+            }
+        }
+        if boolArray.contains(false) {
+            boolArray.removeAll()
+            continue
+        } else {
+            sorted = true
+        }
+    }
+    return functionArray
+}
+
+
+let testArray = [1, 2, 3, 9, 8, 7, 6, 4, 6, 7, 9, 2, 3, 4, 0]
+print(testArray)
+print(sortTheArray(array: testArray))
