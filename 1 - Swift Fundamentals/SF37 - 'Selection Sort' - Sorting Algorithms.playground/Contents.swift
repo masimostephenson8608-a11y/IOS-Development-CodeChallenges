@@ -15,3 +15,39 @@
     //  Like before, you are not expected to understand every element of the page, but take notes in a comment on this challenge about what you can glean from the information.
 
 import Foundation
+
+func insertionSort(array: [Int]) -> [Int] {
+    var functionArray = array
+    var count = 0
+    var sorted = false
+    var sortedArray: [Bool] = []
+    while sorted != true {
+        functionArray.remove(at: functionArray.firstIndex(of: functionArray.min() ?? 0) ?? 0)
+        functionArray.insert(functionArray.min() ?? 0, at: count)
+                
+        count += 1
+        if count > array.count - 1 {
+            count = array.count - 1
+        }
+           
+        for num in 0...(functionArray.count - 2) {
+            if functionArray[num] > functionArray[num + 1] {
+                sortedArray.append(false)
+            } else {
+                sortedArray.append(true)
+            }
+        }
+        if sortedArray.contains(false) {
+            print(functionArray)
+            sortedArray.removeAll()
+            continue
+        } else {
+            sorted = true
+        }
+        continue
+    }
+    return functionArray
+}
+
+var testArray = [9, 8, 7, 5, 4, 6, 3, 2, 1]
+print(insertionSort(array: testArray))
