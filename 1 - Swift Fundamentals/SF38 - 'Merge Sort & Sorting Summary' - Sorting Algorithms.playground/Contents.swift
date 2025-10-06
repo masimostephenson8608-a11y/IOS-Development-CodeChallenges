@@ -16,5 +16,10 @@
 /*
  Merge Sorts are more efficient because...
  
+ Merge sorts make a bunch of sublists, seperating each and every number, combining them later on after checking their logic, putting them in order.
+ 
  We need to learn about sorting algorithms so that...
+ 
+ We can figure out what kind of sorting we want to use in our own code and if needed, make our own sorting algorithm
  */
+
