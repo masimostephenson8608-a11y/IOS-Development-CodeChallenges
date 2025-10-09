@@ -17,3 +17,31 @@
     //  You can find phone number formats here: 🔗https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers
 
 import Foundation
+
+func validateInput(number: String) -> String? {
+    var numberArray: [Character] = Array(number)
+    var result = ""
+    if let testing = Int(number) { } else {
+        print("Not number")
+        return nil
+    }
+    if number.count != 10 {
+        print("Too many or too few numbers")
+        return nil
+    }
+    var phoneFormat = ["(", "X", "X", "X", ")", "-",
+                       "X", "X", "X", "-", "X", "X", "X", "X"]//"(XXX) XXX-XXXX"
+    for digit in numberArray {
+        guard var index = phoneFormat.firstIndex(of: "X") else { return nil }
+        phoneFormat[index] = String(digit)
+    }
+    for count in phoneFormat {
+        result += count
+    }
+    return result
+}
+
+if let test = validateInput(number:
+                                "1234567890") {
+    print(test)
+}
