@@ -17,3 +17,14 @@
     //  Order your output dictionary by frequency.
 
 import Foundation
+func countWordOccurence(string: String) -> [String : Int] {
+    var wordCount: [String : Int] = [:]
+    var words = string.lowercased().split(separator: " ")
+    for word in words {
+        let stringWord = String(word)
+        wordCount[stringWord] = (wordCount[stringWord] ?? 0) + 1
+    }
+    return wordCount
+}
+
+print(countWordOccurence(string: "HI HI HI HI HI HI HI "))
