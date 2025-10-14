@@ -18,5 +18,12 @@
 import Foundation
 
 func convertToDate(_ dateString: String) -> Date? {
-    return nil
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "MMM-dd"
+    return dateFormatter.date(from: dateString)
+}
+
+if let date = convertToDate("Nov-12") {
+    print(date)
 }
