@@ -20,5 +20,7 @@
 import Foundation
 
 func timeString(from ballCounts: (hr: Int, fiveMin: Int, min: Int)) -> String {
-    return "Fix me to return the actual time based on these 👆 counts"
+    return "\(ballCounts.hr) hour(s) and \(ballCounts.min + (ballCounts.fiveMin * 5)) minutes"
 }
+
+print(timeString(from: (5, 5, 5)))
