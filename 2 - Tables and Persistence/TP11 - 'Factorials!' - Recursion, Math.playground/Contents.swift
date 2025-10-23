@@ -27,3 +27,20 @@
     //  Learn about primorials, then add another function that calculates those instead: 🔗https://en.wikipedia.org/wiki/Primorial
 
 import Foundation
+
+func factorial(int: Int) -> Int {
+    var index = int
+    var answer = int
+    while index > 0 {
+        if index != 1 {
+            index -= 1
+            answer *= index
+        } else {
+            break
+        }
+    }
+    print(answer)
+    return answer
+}
+
+factorial(int: 5)
