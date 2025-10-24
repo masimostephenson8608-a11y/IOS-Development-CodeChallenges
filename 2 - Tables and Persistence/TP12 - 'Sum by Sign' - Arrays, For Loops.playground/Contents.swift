@@ -18,3 +18,16 @@
     //  Modify the function to accept an optional third parameter. This parameter should be a closure that takes an integer as input and returns a boolean value. This closure allows you to define custom logic for what constitutes a "positive" or "negative" number.
 
 import Foundation
+
+func returnSigns(ints: [Int]) -> [Int]? {
+    if ints.isEmpty {
+        return nil
+    }
+    var positives = ints.filter({$0 > 0})
+    var negatives = ints.filter({$0 < 0})
+    var positiveResult = positives.count
+    var negativeResult = negatives.reduce(0) { $0 + $1 }
+    return [positiveResult, negativeResult]
+}
+
+print(returnSigns(ints: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]) ?? 0)
