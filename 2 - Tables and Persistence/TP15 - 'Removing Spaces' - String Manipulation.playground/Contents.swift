@@ -14,3 +14,12 @@
     //  Create another function that can accept as input any string that has previously been returned and give you the original input string.
 
 import Foundation
+
+func removingSpaces(string: String) -> String {
+    var result = string
+//    result.replacingOccurrences(of: " ", with: "")
+    result.removeAll(where: { $0 == " " })
+    return result
+}
+
+print(removingSpaces(string: "Hello there, how are you?"))
