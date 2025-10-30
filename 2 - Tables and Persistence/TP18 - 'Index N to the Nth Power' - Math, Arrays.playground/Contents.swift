@@ -25,3 +25,22 @@
     //  Output: [1, 4, 4]
 
 import Foundation
+
+func squareIt(Array: [Int], Number: Int) -> Int? {
+    var result = 1
+    if Array.count < 1 || Number > Array.count - 1 { return nil }
+    return Int(powl(Double(Array[Number]), Double(Number)))
+}
+
+func raiseEveryElement(Array: [Int]) -> [Int]? {
+    var newArray: [Int] = []
+    if Array.count < 1 { return nil }
+    for (index, output) in Array.enumerated() {
+        newArray.append(Int(powl(Double(output), Double(index))))
+    }
+    return newArray
+}
+
+if let testRun = raiseEveryElement(Array: [1, 2, 3, 4, 5, 6, 7]) {
+    print(testRun)
+}
