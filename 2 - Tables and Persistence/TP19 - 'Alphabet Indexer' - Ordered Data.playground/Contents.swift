@@ -17,3 +17,23 @@
     //  Rewrite your function to not rely on using a literal array for the alphabet. (In other words, the alphabet itself should not appear in your function.)
 
 import Foundation
+
+func returnPositionInAlphabet(Letter: Character) -> Int? {
+    let abc = [
+            "a", "b", "c", "d", "e", "f", "g", "h",
+               "i", "j", "k", "l", "m", "n", "o", "p",
+               "q", "r", "s", "t", "u", "v", "w", "x",
+               "y", "z"
+    ]
+    guard abc.contains(Letter.lowercased()) else { return nil }
+    for (index, output) in abc.enumerated() {
+        if Letter.lowercased() == output {
+            return index + 1
+        }
+    }
+    return nil
+}
+
+if let Idk = returnPositionInAlphabet(Letter: "B") {
+    print(Idk)
+}
