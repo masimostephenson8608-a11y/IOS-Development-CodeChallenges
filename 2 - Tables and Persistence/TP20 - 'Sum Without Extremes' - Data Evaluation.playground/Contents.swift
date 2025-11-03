@@ -18,3 +18,25 @@
     //  let sum = [1,2,3,4,5].sumWithoutExtremes()
 
 import Foundation
+
+func sumArray(array: [Int]) -> Int {
+    var newArray: [Int] = array
+    guard array.count >= 3 else { return 0 }
+    if let maxIndex = newArray.firstIndex(where: { $0 == newArray.max() }) {
+        newArray.remove(at: maxIndex)
+    }
+    if let minIndex = newArray.firstIndex(where: { $0 == newArray.min() }) {
+        newArray.remove(at: minIndex)
+    }
+    
+    return newArray.reduce(0) { $0 + $1 }
+}
+
+extension Array where Element == Int {
+    func sumWithoutExtremes() -> Int {
+        guard self.count >= 3 else { return 0 }
+        let total = reduce(0, +)
+        return total - (self.min() ?? 0) - (self.max() ?? 0)
+    }
+}
+print([15,5,6,7,2,3,22,12,22].sumWithoutExtremes())
