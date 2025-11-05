@@ -19,9 +19,35 @@
 import Foundation
 
 extension String {
-    static func capitalizeWord(_ input: String) -> String {
-        input.lowercased()
-        input[0].toUpperCase()
-        return input
+    func capitalizeWord() -> String {
+        self.first?.uppercased()
+        self.lowercased()
+        return self
+    }
+    
+    func capitalizeEveryOtherLetter() -> String {
+        var tracker = 0
+        var string: String = ""
+        for letter in self {
+            if letter == " " {
+                string.append(" ")
+                continue
+            }
+            switch tracker {
+            case 0:
+                string.append(letter.uppercased())
+                tracker += 1
+                
+            case 1:
+                string.append(letter.lowercased())
+                tracker -= 1
+                
+            default:
+                continue
+            }
+        }
+        return string
     }
 }
+
+print("Hi mama".capitalizeEveryOtherLetter())
