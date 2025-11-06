@@ -18,3 +18,22 @@
     //  Input: 4, Output: [1, 4, 16, 64, 256]
 
 import Foundation
+
+func twoToThePowerOfN(exponent n: Int) -> [Int] {
+    var resultsArray: [Int] = []
+    for count in 0...n {
+        resultsArray.append(Int(powl(2, Double(count))))
+    }
+    return resultsArray
+}
+
+func blackDiamond(expnonent n: Int) -> [Int] {
+    var resultsArray: [Int] = []
+    for count in 0...n {
+        resultsArray.append(Int(powl(Double(n), Double(count))))
+    }
+    return resultsArray
+}
+
+print(twoToThePowerOfN(exponent: 6))
+print(blackDiamond(expnonent: 4))
