@@ -27,3 +27,20 @@
     //  Ensure that the function still considers the margin when comparing the rounded values.
 
 import Foundation
+
+func ballParkCompare(a: Int, b: Int, margin: Int?) -> Int {
+    let distance = b - a
+    
+    if let margin = margin {
+        if margin <= 0 {
+            return 0
+        } else if distance <= margin {
+            return 0
+        } else if a < b {
+            return -1
+        } else if a > b {
+            return 1
+        }
+    }
+    return 0
+}
