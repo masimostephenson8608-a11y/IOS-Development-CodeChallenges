@@ -21,11 +21,10 @@
 import Foundation
 
 func calculateDistance(numberOfPoles poles: Int, distanceBetweenPoles distance: Double, diameterOfPoles diameter: Double) -> Double {
-    guard poles > 1 && 10 < distance < 30 && 10 < diameter < 50 else { return 0.0 }
-    var distances: [Double] = []
-    for count in 0...poles {
-        distances.append(distance + diameter)
-    }
-    result = distances.reduce(0) {$0 + $1}
-    return result
+    guard poles > 1 && 10 <= distance  && distance <= 30 && 10 <= diameter && diameter <= 50 else { return 0.0 }
+//    var distances: [Double] = []
+    var result = distance * Double(poles)
+    return result - diameter
 }
+
+print(calculateDistance(numberOfPoles: 5, distanceBetweenPoles: 25, diameterOfPoles: 10))
