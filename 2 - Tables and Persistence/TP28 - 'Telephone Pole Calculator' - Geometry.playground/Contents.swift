@@ -19,3 +19,13 @@
     //  On the opposite side of the street are another set of telephone poles, of the same number, same radius, and same distances. Create a second function that returns the distance between the first pole on one side of the road and the last pole on the other.
 
 import Foundation
+
+func calculateDistance(numberOfPoles poles: Int, distanceBetweenPoles distance: Double, diameterOfPoles diameter: Double) -> Double {
+    guard poles > 1 && 10 < distance < 30 && 10 < diameter < 50 else { return 0.0 }
+    var distances: [Double] = []
+    for count in 0...poles {
+        distances.append(distance + diameter)
+    }
+    result = distances.reduce(0) {$0 + $1}
+    return result
+}
