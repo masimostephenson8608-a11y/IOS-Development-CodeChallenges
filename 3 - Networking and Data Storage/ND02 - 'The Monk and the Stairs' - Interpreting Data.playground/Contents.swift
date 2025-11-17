@@ -15,3 +15,18 @@
     //  Suzuki wants to know which days of the week he climbed more stairs on average. Assuming the input array's contents are organized as [sunday, monday, tuesday, wednesday, thursday, friday, saturday], find the average number of stairs climbed for each day, then output a string of the weekdays, presenting them in order highest to lowest average (i.e. "tuesday, friday, wednesday, thursday, monday, saturday, sunday")
 
 import Foundation
+
+func totalStairs(array: [[Int]]) -> Int {
+    var oneYearTotal: Int {
+        var weekTotal: [Int] = []
+        for week in array {
+            weekTotal.append(week.reduce(0) {$0 + $1} )
+        }
+        return weekTotal.reduce(0) {$0 + $1}
+    }
+    return oneYearTotal * 20
+}
+
+let testArray = [[1, 2, 3, 4], [5, 4, 3, 2, 1]]
+
+print(totalStairs(array: testArray))
