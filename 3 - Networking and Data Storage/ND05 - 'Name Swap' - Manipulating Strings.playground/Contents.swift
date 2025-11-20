@@ -16,3 +16,12 @@
     //  Write another function that accepts a full name as input (first, middle, last) and returns a string in the format, "lastName, firstName middleInitial." Include the comma, abbreviate the middle initial to one letter and add a period.
 
 import Foundation
+
+func nameSwap(string: String) -> String {
+    guard string.contains(" ") else { return string }
+    let names = string.split(separator: " ")
+    let lastName = String(names[1]), firstName = String(names[0])
+    return "\(lastName) \(firstName)"
+}
+
+print(nameSwap(string: "Masimo Stephenson"))
