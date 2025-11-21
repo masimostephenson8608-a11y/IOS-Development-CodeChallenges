@@ -18,3 +18,17 @@
     //  Additionally, create a second function that reverses the resulting string from the first function (e.g. "SSttrriinngg" becomes "ggnniirrttSS").
 
 import Foundation
+
+func stringLonger(string: String) -> String {
+    var array: [Character] = []
+    var stringArray: [String] = []
+    for letter in string {
+        array.append(letter)
+    }
+    for letter in array {
+        stringArray.append("\(letter)\(letter)")
+    }
+    return stringArray.joined()
+}
+
+print(stringLonger(string: "Masimo"))
