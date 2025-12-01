@@ -15,3 +15,36 @@
     //  Output: "Please turn to page 71."
 
 import Foundation
+
+func removeNumbers(string: String) -> String {
+    var newString = string
+    var ints = 0
+    var stringInt: Character {
+        var digit = String(ints)
+        if let character = digit.first {
+            return character
+        } else {
+            return "0"
+        }
+    }
+    
+    while ints < 10 {
+        var indexInt = 0
+        if newString.contains(stringInt) {
+            for character in newString {
+                if character == stringInt {
+                    var index = newString.firstIndex(where: {$0 == character})
+                    if let index { newString.remove(at: index) }
+                } else {
+                    continue
+                }
+            }
+        } else {
+            ints += 1
+            continue
+        }
+    }
+    return newString
+}
+
+print(removeNumbers(string: "m4s1m0"))

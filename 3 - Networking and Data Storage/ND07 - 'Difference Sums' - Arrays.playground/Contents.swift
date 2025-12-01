@@ -20,7 +20,7 @@
 
 import Foundation
 
-func findTotalDifferences(numbers: [Int]) -> (Int, Int) {
+func findTotalDifferences(numbers: [Int]) -> (total: Int, average: Int) {
     guard !numbers.isEmpty else { return (0,0) }
     var differences: [Int] = []
     for (index, _) in numbers.enumerated() {
