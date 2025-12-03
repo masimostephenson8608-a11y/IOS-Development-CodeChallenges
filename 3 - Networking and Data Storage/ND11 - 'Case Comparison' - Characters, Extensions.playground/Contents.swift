@@ -24,3 +24,22 @@
     //  Add another method that will instead return the input character in the same case as self.
 
 import Foundation
+
+extension Character {
+    func sameCaseAs(letter: Character) -> Int {
+        if let number = letter.wholeNumberValue { return -1 }
+        
+        if self.isLowercase == letter.isLowercase || self.isUppercase == letter.isUppercase {
+            return 1
+        } else {
+            return 0
+        }
+    }
+}
+
+let char: Character = "c"
+
+print(char.sameCaseAs(letter: "C"))
+print(char.sameCaseAs(letter: "D"))
+print(char.sameCaseAs(letter: "d"))
+print(char.sameCaseAs(letter: "4"))
