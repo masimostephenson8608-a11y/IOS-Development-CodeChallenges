@@ -18,3 +18,13 @@
     //  Create another function, once again taking a Date as a parameter and comparing it to the current Date. This time, output whether it is within the same hour of the day as the given Date (i.e., the Date parameter is at 9:45 and it is currently 9:15, return true as it is 9:00)
 
 import Foundation
+func isItToday(date: Date) -> Bool {
+    if date.formatted(date: .abbreviated, time: .omitted) == Date.now.formatted(date: .abbreviated, time: .omitted) {
+        return true
+    } else {
+        return false
+    }
+}
+
+print(isItToday(date: Date.now))
+print(isItToday(date: Date.now.addingTimeInterval(TimeInterval(60 * 60 * 24))))
