@@ -18,3 +18,24 @@
     //  Input: "...This is a good example!!!", Output: "This is a good example"
 
 import Foundation
+
+func removePunctuation(string: String) -> String {
+    var changeableString = string
+    guard !string.isEmpty else { return "" }
+    while changeableString.last == " " {
+        if changeableString.last == " " {
+            changeableString.removeLast()
+        } else {
+            break
+        }
+    }
+    if changeableString.last == "." || changeableString.last == "!" ||
+        changeableString.last == "?" || changeableString.last == "," ||
+        changeableString.last == ";" || changeableString.last == ":" ||
+        changeableString.last == "-" || changeableString.last == "_" {
+        changeableString.removeLast()
+    }
+    return changeableString
+}
+
+print(removePunctuation(string: "Masimo! ! "))
