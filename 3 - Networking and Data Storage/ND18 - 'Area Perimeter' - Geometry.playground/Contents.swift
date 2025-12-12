@@ -18,3 +18,14 @@
     //  Create a new function that takes three lengths for the three sides of a triangle. Calculate and return its perimeter and its area.
 
 import Foundation
+
+func polygon(length: Double, width: Double) -> Double {
+    if length == width {
+        return length * width
+    } else {
+        return (length * 2) + (width * 2)
+    }
+}
+
+print(polygon(length: 5, width: 5))
+print(polygon(length: 10, width: 5))

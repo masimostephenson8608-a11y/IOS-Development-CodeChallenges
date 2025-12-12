@@ -29,3 +29,25 @@
     //  If there are no valid solutions, return nil.
 
 import Foundation
+
+func headsAndLegs(heads: Int, legs: Int) -> (cows: Int, chickens: Int) {
+    guard heads <= 1000 && legs <= 1000 else {
+        print("Too many")
+        return (0, 0)
+    }
+    if heads == 0 || legs == 0 {
+        print("No legs or heads")
+        return (0, 0)
+    }
+    if legs % 2 != 0 {
+        print("Not even amount of legs")
+        return (0, 0)
+    }
+    
+    var cows = legs - (2 * heads) / 2
+    var chickens = heads - cows
+    
+    return (cows, chickens)
+}
+
+print(headsAndLegs(heads: 72, legs: 200))
