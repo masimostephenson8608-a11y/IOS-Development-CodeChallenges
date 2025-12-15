@@ -21,3 +21,19 @@
     //  Store their indices in the dictionary separately from their lowercase counterparts.
 
 import Foundation
+
+func getVowels(array: [Int]) -> [Character: [Int]] {
+    var dictionary: [Character: [Int]] = [:]
+    for (index, number) in array.enumerated() {
+        guard let uIntNumber = UInt8(exactly: number) else { continue }
+        let unicodeScalar = UnicodeScalar(uIntNumber)
+        let character = Character(unicodeScalar)
+        
+        if character == "a" || character == "e" || character == "i" || character == "o" || character == "u" {
+            dictionary[character, default: []].append(index)
+        }
+    }
+    return dictionary
+}
+
+print(getVowels(array: [97, 103, 98, 100]))
