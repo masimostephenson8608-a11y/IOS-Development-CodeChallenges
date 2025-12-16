@@ -16,3 +16,20 @@
     //  If there are too few positive integers left after excluding the specified numbers, return nil.
 
 import Foundation
+
+func sumTheSmallest(array: [Int]) -> Int? {
+    var newArray = array
+    newArray = newArray.filter({$0 > 0})
+    let smallestNum = newArray.min()
+    let smallestNumIndex = newArray.firstIndex(where: { $0 == smallestNum })
+    if let index = smallestNumIndex {
+        newArray.remove(at: index)
+    }
+    if let min1 = newArray.min(), let min2 = smallestNum {
+        return min1 + min2
+    } else {
+        return nil
+    }
+}
+
+print(sumTheSmallest(array: [1, 2, 3]) ?? 0)
