@@ -17,28 +17,60 @@ import SwiftUI
 import PlaygroundSupport
 
 struct ContentView: View {
+    var name: String
+    var interests: [String]
+    var dislikes: [String]
+    
     var body: some View {
-        VStack {
-            Text("My Profile")
-            
-            Spacer()
-            
-            Text("Hi! My name is...")
-
-            Spacer()
-            
-            Text("My interests are...")
-            
-            Spacer()
-            
-            Text("I really dislike...")
-            
-            Spacer()
+        ZStack {
+            RadialGradient(colors: [.gray, .red, .black], center: .topLeading, startRadius: 1350, endRadius: 50)
+            VStack {
+                Text("My Profile:")
+                
+                HStack {
+                    Text("Hi! My name is")
+                        .font(.title)
+                    Text(name).font(.title.bold())
+                }.padding()
+                
+                
+                Text("My interests are:")
+                ScrollView {
+                    VStack {
+                        ForEach(interests, id: \.self) { interest in
+                            Text(interest)
+                                .font(.title3)
+                                .padding(10)
+                                .background(.gray)
+                                .clipShape(.capsule)
+                        }
+                    }
+                }.frame(height: 100)
+                    .glassEffect(.regular, in: RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
+                
+                
+                Text("I really dislike...")
+                ScrollView {
+                    VStack {
+                        ForEach(dislikes, id: \.self) { interest in
+                            Text(interest)
+                                .font(.title3)
+                                .padding(10)
+                                .background(.gray)
+                                .clipShape(.capsule)
+                        }
+                    }
+                }.frame(height: 100)
+                    .glassEffect(.regular, in: RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
+                Spacer()
+            }
+            .frame(width: 500, height: 700)
+            .padding(.top, 500)
         }
-        .frame(width: 500, height: 700)
-        .background(Color.cyan)
     }
 }
 
-PlaygroundPage.current.setLiveView(ContentView())
+var dislikes = ["Sports", "Drogas", "Fortnite"]
+var interests = ["Anime", "Computers", "Programming", "Hanging out"]
 
+PlaygroundPage.current.setLiveView(ContentView(name: "Masimo", interests: interests, dislikes: dislikes))
