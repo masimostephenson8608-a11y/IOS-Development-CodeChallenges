@@ -15,3 +15,15 @@
     //  If 'excludeZeroes' is true, the function should exclude any zeroes in the input array when calculating the products. Otherwise, the function should behave as originally specified.
 
 import Foundation
+
+func noNameFunction(array: [Int]) -> [Int] {
+    var newArray: [Int] = []
+    
+    for number in array {
+        var result = array.reduce(1) { $0 * $1 } / number
+        newArray.append(result)
+    }
+    return newArray
+}
+
+print(noNameFunction(array: [1, 2, 3, 4, 5]))
