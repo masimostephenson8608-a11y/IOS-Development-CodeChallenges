@@ -25,25 +25,64 @@ import PlaygroundSupport
 struct ContentView: View {
     let symbolChoices = ["cloud.rainbow.half.fill", "apple.terminal.on.rectangle.fill", "badge.plus.radiowaves.right", "sun.rain.fill"]
     @State private var selectedSymbol: String = "cloud.rainbow.half.fill"
+    @State var imageSize: CGFloat = 100
+    @State var imageWeight: Font.Weight = .regular
+    @State var renderingMode: SymbolRenderingMode = .palette
+    @State var variableValue: Double = 0.5
+    @State var color: SwiftUI.Color = .black
     
     var body: some View {
         VStack {
+            Spacer()
+            
+            Text("Input size")
+            
+            Slider(value: $imageSize, in: 100...200)
+                .frame(width: 350)
+            
+            Text("Image Weight")
+            
+            
+            Picker("Image Weight", selection: $imageWeight) {
+                Text("Thin")
+                    .tag(Font.Weight.thin)
+                Text("Regular")
+                    .tag(Font.Weight.regular)
+                Text("Bold")
+                    .tag(Font.Weight.bold)
+            }.pickerStyle(.segmented)
+                .frame(width: 350)
+            
+            Text("Won't let me use Rendering Mode in a picker so I couldn't really add it").multilineTextAlignment(.center)
+                .frame(width: 350)
+            
+            Picker("Color", selection: $color) {
+                Text("Black")
+                    .tag(SwiftUI.Color.black)
+                Text("Red")
+                    .tint(.red)
+                    .tag(SwiftUI.Color.red)
+            }.pickerStyle(.inline)
+                .colorMultiply(.red)
+            
             Picker("Select a Symbol", selection: $selectedSymbol) {
                 ForEach(symbolChoices, id: \.self) { symbol in
                     Text(symbol).tag(symbol)
                 }
-            }
+            }.frame(width: 350)
             .pickerStyle(WheelPickerStyle()) // Change this to your preferred style
             .padding()
+            
+            Slider(value: $variableValue, in: 0...1, step: 0.05)
             
             Text("Selected Symbol: \(selectedSymbol)")
                 .font(.title)
                 .padding()
             
-            Image(systemName: selectedSymbol, variableValue: 0.5)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 100)
+            Image(systemName: selectedSymbol, variableValue: variableValue)
+                .font(.system(size: imageSize, weight: imageWeight))
+                .symbolRenderingMode(renderingMode)
+                .foregroundStyle(color)
                 .padding()
         }
     }
