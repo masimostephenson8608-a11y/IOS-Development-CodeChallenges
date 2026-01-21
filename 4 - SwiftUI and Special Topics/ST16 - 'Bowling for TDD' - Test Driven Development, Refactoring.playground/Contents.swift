@@ -28,7 +28,7 @@ import XCTest
 var greeting = "Hello, playground"
 
 class Game {
-    private var rolls: [Int] = Array(repeating: 0, count: 21)
+    var rolls: [Int] = Array(repeating: 0, count: 21)
     private var currentRoll = 0
     
     let bestScorePossibleForOneFrame = 10
@@ -42,54 +42,45 @@ class Game {
         var score = 0
         var frameIndex = 0
         
-        var loopCounter = 0
-
-        while loopCounter < 10 {
+        for _ in 0...9 {
           let currentFrame = frameIndex
 
-          switch isStrike(currentFrame) {
-          case true:
-            // Player has bowled a strike and should get ten points and go to next frame
-            score += bestScorePossibleForOneFrame + strikeBonus(currentFrame)
-            frameIndex += 1
-          case false where isSpare(currentFrame):
-            // Player has bowled a spare and should get ten points plust their spare bonus and go up two frames
-            score += bestScorePossibleForOneFrame + spareBonus(currentFrame)
-            frameIndex += 2
-          default:
+            if isStrike(currentFrame) {
+                // Player has bowled a strike and should get ten points and go to next frame
+                score += bestScorePossibleForOneFrame + strikeBonus(currentFrame)
+                frameIndex += 1
+            } else if isSpare(currentFrame) {
+                // Player has bowled a spare and should get ten points plust their spare bonus and go up two frames
+                score += bestScorePossibleForOneFrame + spareBonus(currentFrame)
+                frameIndex += 2
+            } else {
             // Player has bowled a normal frame and should get however many points they earned for this frame
-            score += sumOfBallsInFrame(currentFrame)
-            frameIndex += 2
+                score += sumOfBallsInFrame(currentFrame)
+                frameIndex += 2
           }
-
-          loopCounter += 1
         }
         
         return score
     }
     
-    private func goToRollArrayAndFindSpecificRollForGivenFrameIndex(frameIndex: Int) -> Int {
-        rolls[frameIndex]
+    func isStrike(_ frameIndex: Int) -> Bool {
+        return rolls[frameIndex] == bestScorePossibleForOneFrame
     }
     
-    private func isStrike(_ frameIndex: Int) -> Bool {
-        return goToRollArrayAndFindSpecificRollForGivenFrameIndex(frameIndex: frameIndex) == bestScorePossibleForOneFrame
+    func sumOfBallsInFrame(_ frameIndex: Int) -> Int {
+        return rolls[frameIndex] + rolls[frameIndex + 1]
     }
     
-    private func sumOfBallsInFrame(_ frameIndex: Int) -> Int {
-        return goToRollArrayAndFindSpecificRollForGivenFrameIndex(frameIndex: frameIndex) + goToRollArrayAndFindSpecificRollForGivenFrameIndex(frameIndex: frameIndex + 1)
+    func spareBonus(_ frameIndex: Int) -> Int {
+        return rolls[frameIndex + 2]
     }
     
-    private func spareBonus(_ frameIndex: Int) -> Int {
-        return goToRollArrayAndFindSpecificRollForGivenFrameIndex(frameIndex: frameIndex + 2)
+    func strikeBonus(_ frameIndex: Int) -> Int {
+        return rolls[frameIndex + 1] + rolls[frameIndex + 2]
     }
     
-    private func strikeBonus(_ frameIndex: Int) -> Int {
-        return goToRollArrayAndFindSpecificRollForGivenFrameIndex(frameIndex: frameIndex + 1) + goToRollArrayAndFindSpecificRollForGivenFrameIndex(frameIndex: frameIndex + 2)
-    }
-    
-    private func isSpare(_ frameIndex: Int) -> Bool {
-        return goToRollArrayAndFindSpecificRollForGivenFrameIndex(frameIndex: frameIndex) + goToRollArrayAndFindSpecificRollForGivenFrameIndex(frameIndex: frameIndex + 1) == bestScorePossibleForOneFrame
+    func isSpare(_ frameIndex: Int) -> Bool {
+        return rolls[frameIndex] + rolls[frameIndex + 1] == bestScorePossibleForOneFrame
     }
 }
 
