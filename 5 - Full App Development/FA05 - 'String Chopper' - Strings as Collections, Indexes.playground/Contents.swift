@@ -17,3 +17,24 @@
     //  Input: splitNCasesUnevenly("Characters", 3), Output: ["Cha", "rac", "ters"]
 
 import Foundation
+
+func splitNCases(string: String, n: Int) -> [String] {
+    let characterCount = string.count / n
+    var strings: [String] = []
+    var repeatCount = 0
+    repeat {
+        let beginning = string.index(string.startIndex, offsetBy: characterCount * repeatCount)
+        let end: String.Index
+        if repeatCount == n - 1 {
+            end = string.endIndex
+        } else {
+            end = string.index(beginning, offsetBy: characterCount)
+        }
+        let currentPart = string[beginning..<end]
+        strings.append(String(currentPart))
+        repeatCount += 1
+    } while strings.count != n
+    return strings
+}
+
+print(splitNCases(string: "NEVERRRRR", n: 4))

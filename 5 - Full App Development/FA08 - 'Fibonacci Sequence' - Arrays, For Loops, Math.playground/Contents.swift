@@ -20,3 +20,23 @@
     //  Input: (fibSeq(n: 4, i: 7), Output: [8, 13, 21, 34]
 
 import Foundation
+
+func fiboSequence(_ loops: Int) -> [Int] {
+    var array: [Int] = []
+    for count in 0..<loops {
+        if count == 0 {
+            array.append(0)
+            continue
+        } else if count == 1 {
+            array.append(1)
+            continue
+        } else {
+            let newNumber = array[count - 1] + array[count - 2]
+            array.append(newNumber)
+        }
+    }
+    
+    return array
+}
+
+print(fiboSequence(7))
