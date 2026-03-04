@@ -31,3 +31,42 @@
 //  ⌺ Black Diamond Challenge:
     //  7s are special now. They only like to hang out between one odd and one even number. Rewrite your code to take the case of 7s into account.
 import Foundation
+
+func spotCheck(int: Int, array: [Int]) -> Int {
+    var even = false
+    var availableIndexs: [Int] = []
+    if array.isEmpty {
+        return 0
+    }
+    if int % 2 == 0 {
+        even = true
+    } else {
+        even = false
+    }
+    
+    var evensAndOdds = array.map { $0 % 2 }
+    
+    if even {
+        for (index, num) in evensAndOdds.enumerated() {
+            if index == evensAndOdds.count - 1 {
+                continue
+            }
+            if num == 0 {
+                availableIndexs.append(index)
+            }
+        }
+    } else {
+        for (index, num) in evensAndOdds.enumerated() {
+            if index == evensAndOdds.count - 1 {
+                continue
+            }
+            if num == 1 {
+                availableIndexs.append(index)
+            }
+        }
+    }
+    
+    return availableIndexs.count
+}
+
+print(spotCheck(int: 12, array: [0, 4, 6, 8]))
